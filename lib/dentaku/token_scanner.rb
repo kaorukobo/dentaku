@@ -86,7 +86,7 @@ module Dentaku
 
       # NOTE: Convert to DateTime as Array(Time) returns the parts of the time for some reason
       def datetime
-        new(:datetime, /\d{2}\d{2}?-\d{1,2}-\d{1,2}( \d{1,2}:\d{1,2}:\d{1,2})? ?(Z|((\+|\-)\d{2}\:?\d{2}))?/, lambda { |raw| Time.parse(raw).to_datetime })
+        new(:datetime, /__DONT_MATCH_TO_THIS_TOKEN__/, lambda { |raw| Time.parse(raw).to_datetime })
       end
 
       def numeric
